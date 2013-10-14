@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="1.0" branch-rate="1.0" lines-covered="0" lines-valid="0" branches-covered="0" branches-valid="0" complexity="1.3333333333333333" version="2.0.3" timestamp="1381728921799">
+	<sources>
+		<source>src</source>
+	</sources>
+	<packages>
+		<package name="" line-rate="1.0" branch-rate="1.0" complexity="1.3333333333333333">
+			<classes>
+				<class name="HelloWorld" filename="HelloWorld.java" line-rate="1.0" branch-rate="1.0" complexity="1.3333333333333333">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>

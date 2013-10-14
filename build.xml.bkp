@@ -1,0 +1,43 @@
+<?xml version="1.0" ?> 
+<project name="AntExample1" default="" basedir=".">
+
+	<path id="path.test">
+		<pathelement path="/home/vinod_doshi/Projects/junit_jars/junit-4.11.jar"/>
+	    <pathelement location="/home/vinod_doshi/workspace/JunitTesting/build/classes"/><!-- All compiled class should be under this folder -->
+	</path>
+	
+	<property name="junit.output.dir" value="junit"/>
+	
+	<target name="init">
+		<mkdir dir="build/classes"/>
+		<mkdir dir="dist" />
+		<mkdir dir="${junit.output.dir}"/>
+	</target>
+	
+	<target name="compile" depends="init" >
+		<javac destdir="build/classes" srcdir="src">
+			<classpath refid="path.test"/>
+		</javac>
+
+	</target>
+	
+		
+	<target name="clean">
+		<delete dir="dist" />
+		<delete dir="build" />
+	</target>
+	
+	<target name="junit" depends="compile">
+	<junit printsummary="yes" haltonfailure="yes">
+		<formatter type="xml"/>
+		<classpath refid="path.test"/>
+		<!-- <batchtest fork="yes" todir="${dir.report.unittests.xml}">
+			<fileset dir="src">
+				<include name="**/*Hello*.java"/>
+			</fileset>
+		</batchtest> -->
+		<test name="HelloWorld" todir="${junit.output.dir}"/>
+	</junit>
+	</target>
+	
+</project>
