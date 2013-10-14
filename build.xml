@@ -5,9 +5,9 @@
 	<property file="build.properties" />
 
 	<path id="path.test">
-		<pathelement path="/home/vinod_doshi/Projects/junit_jars/junit-4.11.jar"/>
-		<pathelement path="/home/vinod_doshi/Projects/junit_jars/hamcrest-core-1.3.jar"/>
-	    <pathelement location="/home/vinod_doshi/workspace/JunitTesting/build/classes"/><!-- All compiled class should be under this folder -->
+		<pathelement path="junit_jars/junit-4.11.jar"/>
+		<pathelement path="junit_jars/hamcrest-core-1.3.jar"/>
+	    <pathelement location="build/classes"/><!-- All compiled class should be under this folder -->
 	</path>
 	
 	<property name="junit.output.dir" value="junit"/>
