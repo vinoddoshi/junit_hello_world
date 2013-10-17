@@ -101,7 +101,7 @@
 		<classpath refid="cobertura.classpath" />
 		<batchtest todir="${reports.xml.dir}" fork="yes" unless="testcase">
 						<fileset dir="src">
-							<include name="**/*Test.java" />
+							<include name="**/*.java" />
 						</fileset>
 		</batchtest>
 		
