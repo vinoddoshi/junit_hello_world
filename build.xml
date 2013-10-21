@@ -32,6 +32,7 @@
 	<target name="compile" depends="init" >
 		<javac destdir="build/classes" srcdir="src">
 			<classpath refid="path.test"/>
+			<classpath refid="cobertura.classpath"/>
 		</javac>
 
 	</target>
@@ -101,16 +102,16 @@
 		<classpath refid="cobertura.classpath" />
 		<batchtest todir="${reports.xml.dir}" fork="yes" unless="testcase">
 						<fileset dir="src">
-							<include name="**/*.java" />
+							<include name="**/*Test.java" />
 						</fileset>
 		</batchtest>
 		
 	</junit>
 	</target> 
 	
-	<target name="coverage-check" depends="runTestInstrumented">
+	<!-- <target name="coverage-check" depends="runTestInstrumented">
 		<cobertura-check branchrate="34" totallinerate="100" />
-	</target>
+	</target>-->
 		
 
 	<target name="coverage-report" depends="runTestInstrumented">
